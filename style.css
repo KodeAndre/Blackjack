@@ -48,3 +48,6 @@ button:active {
     display: none;
 }
 
+#restartGame {
+    display: none;
+}

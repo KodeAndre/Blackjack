@@ -42,6 +42,7 @@ function renderGame() {
 }
 
 function startGame() {
+    isAlive = true
     renderGame()
     document.getElementById("startgame").style.display="none"
     document.getElementById("newcard").style.display="block"
@@ -53,5 +54,12 @@ function newCard() {
     sum += card
     cards.push(card)
     renderGame()
+    if (sum >= 21) {
+        document.getElementById("newcard").style.display="none"
+        document.getElementById("restartgame").style.display="block"
+    }
 }
 
+function restartGame() {
+    window.location.reload()
+}
